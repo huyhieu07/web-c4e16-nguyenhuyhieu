@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>10 customer</title>
+  </head>
+  <body>
+    {% for u in a %}
+
+<img src="../static/image/male-profile.jpg" alt="anh bi loi roi!">
+    <p>Name: {{u.name}}</p>
+    <p>Gender: {{u.gender}}</p>
+    <p>company: {{u.company}}</p>
+    <p>job:{{u.job}}</p>
+    <p>phone: {{u.phone}}</p>
+    <p>address: {{u.address}}</p>
+    {% endfor%}
+
+  </body>
+</html>
