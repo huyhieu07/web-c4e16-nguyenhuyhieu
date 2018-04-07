@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>cập nhật</title>
+  </head>
+  <body>
+    <h1>CẬP NHẬT THÔNG TIN</h1>
+    <form method="post">
+      <!-- #gui 1 method voi request la post ve de bao mat thong tin -->
+
+<label>Tên: </label>
+<input type="text" name="name" value= {{s.name}} ><br><br>
+
+<label>Năm sinh: </label>
+<input type="number" name="yob" value= {{s.number}}><br><br>
+
+<label>Chiều cao: </label>
+<input type="number" name="height" value= {{s.height}} ><br><br>
+
+<label>Số điện thoại: </label>
+<input type="text" name="phone" value= {{s.phone}}><br><br>
+
+<label>Địa chỉ: </label>
+<input type="text" name="address" value= {{s.address}}><br><br>
+
+<label>Mô tả: </label>
+<input type="text" name="description" value= {{s.description}} ><br><br>
+
+<label>Số đo 3 vòng: </label>
+<input type="text" name="measurements" value= {{s.measurements}}><br><br>
+
+<form action="">
+  <input type="radio" name="gender" value= 1> Nam<br><br>
+  <input type="radio" name="gender" value= 0> Nữ<br><br>
+<br><br>
+
+<input type="submit" value="gui">
+    </form>
+  </body>
+</html>
