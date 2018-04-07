@@ -1,10 +1,11 @@
-from models.river import River
+from models.service import Service
 import mlab
+
 
 mlab.connect()
 
 # all_services = Service.object()
-# # print(all_services[0].name)
+# print(all_services[0].name)
 
 
 # id_to_find = "5ac08cfac7bd14f509f939fa"

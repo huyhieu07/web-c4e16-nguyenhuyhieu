@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>admin :v</title>
+  </head>
+  <body>
+    <h1>admin page</h1>
+    <a href="{{url_for("create")}}">them nhan vien</a>
+    <br><br>
+    <br><br>
+    <table border="1px",>
+<thead>
+  <th>so thu tu</th>
+  <th>ten</th>
+  <th>gioi tinh</th>
+  <th>chieu cao</th>
+  <th>yob</th>
+  <th>trang thai</th>
+  <th>phone number</th>
+  <th>dia chi</th>
+  <th>sua xoa</th>
+
+</thead>
+<tbody>
+  {% for s in service %}
+  <tr>
+  <td>{{ loop.index }}</td>
+  <td>{{s.name}}</td>
+<td>{{ "Nu" if s.gender == 0 else "nam" }}</td>
+  <td>{{s.height}}</td>
+  <td>{{s.yob}}</td>
+  <td>{{"ranh" if s.gender == True else "ban"}}</td>
+  <td>{{s.phone}}</td>
+  <td>{{s.address}}</td>
+<td>
+<a href="#">sua</a>
+<a href="{{ url_for('delete', service_id = s.id) }}">xoa</a>
+</td>
+  </tr>
+{% endfor%}
+</tbody>
+
+    </table>
+  </body>
+</html>
