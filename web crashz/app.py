@@ -11,6 +11,7 @@ app = Flask(__name__)
 app.secret_key = "dayla1doanvanbankhongcoynghia"
 mlab.connect()
 
+
 ########################
 @app.route('/')
 def index():
@@ -179,6 +180,8 @@ def order():
 def order_data():
     order_items = Order.objects()
     return render_template('order-page.html', order_items = order_items)
+########################
+@app.route('/accepted')
 def send_mail():
     user_object = Customers.objects.get(id = str(session["id"]))
     user_gmail = user_object['gmail']
@@ -191,8 +194,10 @@ def send_mail():
     msg = Message('Muadongkhonglanh',to = user_gmail, html = contentz)
 
     # don_hang = Order.objects.get(id=)
-    order_items.update(set__is_accepted = "0")
+    # order_items.update(set__is_accepted = "0")
+    #2 dòng trên đang có vấn đề
     gmail.send(msg)
+    return redirect(url_for('order_data'))
 
 
 
