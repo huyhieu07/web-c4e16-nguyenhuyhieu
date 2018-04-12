@@ -18,4 +18,4 @@ class Service(Document):
     address = StringField()
     description = StringField()
     measurements = StringField()
-    # status = BooleanField() #true/ false
+    status = BooleanField() #true/ false

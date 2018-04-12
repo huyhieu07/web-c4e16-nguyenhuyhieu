@@ -6,8 +6,11 @@
   </head>
   <body>
     <h1>admin page</h1>
-    <a href="{{url_for("create")}}">them nhan vien</a>
+    <a href="{{url_for("create")}}">Thêm nhân viên</a>
     <br><br>
+    <a href="{{url_for('order_data')}}">Xem các yêu cầu dịch vụ</a>
+    <br><br>
+    <a href="{{url_for('index')}}">Trang chủ</a>
     <br><br>
     <table border="1px">
 <thead>
@@ -26,7 +29,7 @@
   {% for hola in s %}
   <tr>
   <td>{{ loop.index }}</td>
-  <td>{{hola.name}}</td>
+  <td><a href="{{url_for('detail',service_id = hola.id)}}">{{hola.name}}</a> </td>
   <td>{{hola.yob}}</td>
   <td>{{ "Nữ" if hola.gender == 0 else "Nam" }}</td>
   <td>{{hola.height}}</td>

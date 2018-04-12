@@ -6,14 +6,15 @@
   </head>
   <body>
 
-    <img src= {{hola.image}} alt="anh bi loi">
-    <p>Ten: {{hola.name}}</p>
-    <p>Nam sinh: {{hola.yob}}</p>
-    <p>Chieu cao: {{hola.height}}</p>
-    <p>So dien thoai: {{hola.phone}}</p>
-    <p>Dia chi: {{hola.address}}</p>
-    <p>Mo ta: {{hola.description}}</p>
-    <p>So do 3 vong: {{hola.measurements}}</p>
-    
+    <img src= "{{hola.image}}" alt="ảnh bị lỗi!">
+    <p> Tên: {{hola.name}}</p>
+    <p>Năm sinh: {{hola.yob}}</p>
+    <p>Chiều cao: {{hola.height}}</p>
+    <p>Số điện thoại: {{hola.phone}}</p>
+    <p>Địa chỉ: {{hola.address}}</p>
+    <p>Mô tả: {{hola.description}}</p>
+    <p>Số đo 3 vòng: {{hola.measurements}}</p>
+<a href="{{url_for('order')}}">Yêu cầu dịch vụ</a><br>
+<a href="{{url_for('logout')}}">Đăng xuất</a>
   </body>
 </html>

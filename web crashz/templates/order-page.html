@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Order page</title>
+  </head>
+  <body>
+    <h1>Danh sách yêu cầu</h1>
+    <a href="{{url_for('admin')}}">trở về trang admin</a> <br>
+    <a href="{{url_for('index')}}">trở về trang chủ</a> <br>
+<br>
+<table border="1px">
+  <thead>
+    <th>Stt</th>
+    <th>Đối tác</th>
+    <th>Người dùng</th>
+    <th>Thời gian yêu cầu</th>
+  </thead>
+<tbody>
+  {% for item in order_items %}
+<tr>
+  <td>{{loop.index}}</td>
+  <td>{{item.service}}</td>
+  <td>{{item.user}}</td>
+  <td>{{item.time}}</td>
+  <td><a href="{{url_for('send_mail')}}">Phê duyệt yêu cầu</a> </td>
+</tr>
+{% endfor %}
+
+</tbody>
+</table>
+  </body>
+</html>

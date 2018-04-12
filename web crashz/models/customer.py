@@ -15,3 +15,8 @@ class Customers(Document):
     phone = StringField()
     address = StringField()
     job = StringField()
+    username = StringField()
+    gmail = StringField()
+    fullname = StringField()
+    password = StringField()
+    request = StringField()

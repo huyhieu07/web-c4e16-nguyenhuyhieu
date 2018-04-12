@@ -2,12 +2,20 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Mua dong khong lanh</title>
+    <title>warm winter</title>
   </head>
   <body>
-    <h1>mua dong khong lanh</h1>
-    <b>Ban la nam: </b><a href="">Click vao em di!</a>
-    <br>
-    <b>Ban la nu: </b><a href="">Click vao anh di!</a>
+    <h1>MÙA ĐÔNG KHÔNG LẠNH</h1>
+    <p>----------------------------<a href="{{ url_for('signin') }}">Đăng nhập</a>------------------------------</p>
+    <p>Nếu chưa có tài khoản: <a href="{{ url_for('signup') }}">Đăng ký</a> </p>
+        {% for service in services %}
+        <p>-------------------------------------------------------------------------------</p>
+        <img src= {{ service.image }} alt="ảnh bị lỗi!!!">
+        <p>Tên: {{service.name}}</p>
+        <p>Năm sinh: {{service.yob}}</p>
+      <p>  Chiều cao: {{service.height}}</p>
+        <a href= "{{ url_for('detail', service_id = service.id) }}">Xem thêm</a> <br> <br>
+        {% endfor %}
+
   </body>
 </html>
